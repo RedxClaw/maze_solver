@@ -2,8 +2,6 @@
 
 void ft_find_start(Maze *maze)
 {
-	maze->start = (int *)malloc(2 * sizeof(int));
-
 	int i = 0, j = 0;
 
 	while (maze->matrix[i][j]) {

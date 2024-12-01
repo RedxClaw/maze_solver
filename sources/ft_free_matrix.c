@@ -6,6 +6,4 @@ void ft_free_matrix(Maze *maze)
 		free(maze->matrix[i]);
 
 	free(maze->matrix);
-
-	free(maze->start);
 }

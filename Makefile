@@ -1,5 +1,5 @@
 CC = gcc # Le compilateur C
-CFLAGS = -Wall -Wextra -Werror -Wunused -Wshadow -I$(INCLUDES) # Les options passees au compilateurws
+CFLAGS = -Wall -Wextra -Werror -Wunused -Wshadow -g3 -I$(INCLUDES) # Les options passees au compilateurws
 
 INCLUDES = includes
 

@@ -28,7 +28,7 @@ typedef struct Queue {
 
 typedef struct Maze {
 	int	  heigth, width;
-	int	 *start;
+	int	  start[2];
 	int **matrix;
 } Maze;
 
