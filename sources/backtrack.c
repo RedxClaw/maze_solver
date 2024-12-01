@@ -8,6 +8,7 @@ int backtrack(Maze *maze, int debug)
 
 	data.i = maze->start[0];
 	data.j = maze->start[1];
+
 	data.degree = ft_get_degree(maze, data.i, data.j);
 
 	iteration = 0;
@@ -21,6 +22,10 @@ int backtrack(Maze *maze, int debug)
 		if (data.degree < 2)
 		{
 			maze->matrix[data.i][data.j] = -1;
+			if ((*stack).next == NULL) {
+				printf("The maze is invalid (maybe there is not a solution.)\n");
+				exit(EXIT_FAILURE);
+			}
 			ft_sPop(&stack);
 			data = ft_sTop(stack);
 			stack->data.degree = ft_get_degree(maze, data.i, data.j);

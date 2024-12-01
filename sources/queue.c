@@ -10,14 +10,18 @@ int ft_enQueue(Queue *q, struct qNode *previous, Data data)
 
 	new_node->data = data;
 	new_node->previous = previous;
+	new_node->next = NULL;
 
-	if (q->cursor == NULL) {
+	if (q->head == NULL) {
 		q->head = new_node;
+	}
+	else {
+		q->tail->next = new_node;
+	}
+	if (q->cursor == NULL) {
 		q->cursor = new_node;
 	}
-	else
-		q->tail->next = new_node;
-
+	
 	q->tail = new_node;
 
 	q->size++;

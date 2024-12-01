@@ -6,10 +6,8 @@ int main(int argc, char *argv[])
 	int debug, iteration;
 
 	struct timeval t1, t2;
-	if (!strcmp(argv[argc - 1], "debug"))
-		debug = 1;
-	else
-		debug = 0;
+	debug = !strcmp(argv[argc - 1], "debug");
+		
 
 	gettimeofday(&t1, NULL);
 	maze = ft_fill_matrix(argv[1]);
@@ -20,6 +18,8 @@ int main(int argc, char *argv[])
 	ft_fprintf_matrix(&maze, iteration, ft_gettime(t1, t2), "output_backtracking.txt");
 	printf("Time elapsed for backtracking algorithm : %.3f ms\n", ft_gettime(t1, t2));
 	printf("It took %i iteration(s) to solve the maze\n", iteration);
+
+	ft_free_matrix(&maze);
 
 	printf("\n------------------------\n\n");
 

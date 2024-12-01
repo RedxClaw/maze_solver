@@ -22,7 +22,6 @@ void ft_find_start(Maze *maze);
 int ft_get_degree(Maze *maze, int i, int j);
 int ft_is_solved(Maze *maze, int i, int j);
 
-int ft_strlen(char *c);
 void ft_fprintf_matrix(Maze *maze, int iteration, double elapsedTime, char *output_directory);
 
 int backtrack(Maze *maze, int debug);
